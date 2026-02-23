@@ -1,26 +1,6 @@
 ---
 title: Access Ozone using PyArrow (Docker Quickstart)
-linkTitle: PyArrow Access (Docker)
-summary: Step-by-step tutorial for accessing Ozone from Python using PyArrow in a Docker environment.
-weight: 11
 ---
-
-<!--
-Licensed to the Apache Software Foundation (ASF) under one or more
-contributor license agreements.  See the NOTICE file distributed with
-this work for additional information regarding copyright ownership.
-The ASF licenses this file to You under the Apache License, Version 2.0
-(the "License"); you may not use this file except in compliance with
-the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
 
 This tutorial demonstrates how to access Apache Ozone from Python using **PyArrow**, with Ozone running in Docker.
 
@@ -33,7 +13,7 @@ This tutorial demonstrates how to access Apache Ozone from Python using **PyArro
 
 ### 1️⃣ Start Ozone in Docker
 
-Download the latest Docker Compose file for Ozone and start the cluster with 3 DataNodes:
+Download the latest Docker Compose file for Ozone and start the cluster with 3 Datanodes:
 
 ```bash
 curl -O https://raw.githubusercontent.com/apache/ozone-docker/refs/heads/latest/docker-compose.yaml
@@ -45,6 +25,7 @@ docker compose up -d --scale datanode=3
 ```bash
 docker exec -it <your-scm-container-name-or-id> bash
 ```
+
 > Change the container id `<your-scm-container-name-or-id>` to your actual container id.
 
 The rest of the tutorial will run on this container.
@@ -67,11 +48,13 @@ pip install pyarrow
 Depending on your system architecture, run one of the following:
 
 For ARM64 (Apple Silicon, ARM servers):
+
 ```bash
 curl -L "https://www.apache.org/dyn/closer.lua?action=download&filename=hadoop/common/hadoop-3.4.0/hadoop-3.4.0-aarch64.tar.gz" | tar -xz --wildcards 'hadoop-3.4.0/lib/native/libhdfs.*'
 ```
 
 For x86_64 (most desktops and servers):
+
 ```bash
 curl -L "https://www.apache.org/dyn/closer.lua?action=download&filename=hadoop/common/hadoop-3.4.0/hadoop-3.4.0.tar.gz" | tar -xz --wildcards 'hadoop-3.4.0/lib/native/libhdfs.*'
 ```
@@ -138,4 +121,4 @@ python ozone_pyarrow_example.py
 - [Apache Ozone Docker](https://github.com/apache/ozone-docker)
 - [PyArrow Documentation](https://arrow.apache.org/docs/python/)
 - [PyArrow HadoopFileSystem Reference](https://arrow.apache.org/docs/python/generated/pyarrow.fs.HadoopFileSystem.html)
-- [Ozone Client Interfaces](https://ozone.apache.org/docs/edge/interface.html)
+- [Ozone Client Interfaces](../client-interfaces/)

@@ -1,26 +1,6 @@
 ---
 title: Access Ozone using Boto3 (Docker Quickstart)
-linkTitle: Boto3 Access (Docker)
-description: Step-by-step tutorial for accessing Ozone from Python using Boto3 and the S3 Gateway in a Docker environment.
-weight: 12
 ---
-
-<!--
-Licensed to the Apache Software Foundation (ASF) under one or more
-contributor license agreements.  See the NOTICE file distributed with
-this work for additional information regarding copyright ownership.
-The ASF licenses this file to You under the Apache License, Version 2.0
-(the "License"); you may not use this file except in compliance with
-the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
 
 This tutorial demonstrates how to access Apache Ozone from Python using **Boto3**, via Ozone's S3 Gateway, with Ozone running in Docker.
 
@@ -33,7 +13,7 @@ This tutorial demonstrates how to access Apache Ozone from Python using **Boto3*
 
 ### 1️⃣ Start Ozone in Docker
 
-Download the latest Docker Compose file for Ozone and start the cluster with 3 DataNodes:
+Download the latest Docker Compose file for Ozone and start the cluster with 3 Datanodes:
 
 ```bash
 curl -O https://raw.githubusercontent.com/apache/ozone-docker/refs/heads/latest/docker-compose.yaml
@@ -45,6 +25,7 @@ docker compose up -d --scale datanode=3
 ```bash
 docker exec -it <your-scm-container-name-or-id> bash
 ```
+
 > Change the container id `<your-scm-container-name-or-id>` to your actual container id.
 
 The rest of the tutorial will run on this container.
@@ -118,6 +99,6 @@ python ozone_boto3_example.py
 
 - [Apache Ozone Docker](https://github.com/apache/ozone-docker)
 - [Boto3 Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
-- [Ozone S3 Docs](https://ozone.apache.org/docs/edge/interface/s3.html)
-- [Ozone Securing S3 Docs](https://ozone.apache.org/docs/edge/security/securings3.html)
-- [Ozone Client Interfaces](https://ozone.apache.org/docs/edge/interface.html)
+- [Ozone S3 Docs](./s3/s3-api)
+- [Ozone Securing S3 Docs](./s3/securing-s3)
+- [Ozone Client Interfaces](../client-interfaces/)

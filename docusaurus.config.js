@@ -237,7 +237,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: undefined,
+          sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/apache/ozone-site/tree/master',
           // TODO: The following sections are currently hidden. Ensure that a section contains a few pages
@@ -246,6 +246,20 @@ const config = {
           //  '**/06-troubleshooting/**',
           //  '**/07-system-internals/**',
           //]
+          sidebarItemsGenerator: async ({defaultSidebarItemsGenerator, ...args}) => {
+            const items = await defaultSidebarItemsGenerator(args);
+            const hiddenIds = new Set([
+              'user-guide/client-interfaces/boto3-tutorial',
+              'user-guide/client-interfaces/pyarrow-tutorial',
+              'user-guide/client-interfaces/python-requests-ozone-httpfs',
+            ]);
+            function filterItems(list) {
+              return list
+                .filter(item => !(item.type === 'doc' && hiddenIds.has(item.id)))
+                .map(item => item.type === 'category' ? {...item, items: filterItems(item.items)} : item);
+            }
+            return filterItems(items);
+          },
         },
         blog: {
           showReadingTime: true,

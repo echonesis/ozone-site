@@ -76,7 +76,7 @@ Configure fs.defaultFS in the core-site.xml to point to the Ozone cluster. For e
 
 :::
 
-Try it yourself! Check out [PyArrow Tutorial](../../../../2.0.0/recipe/pyarrowtutorial.html) for a quick start using Ozone's Docker image.
+Try it yourself! Check out [PyArrow Tutorial](./pyarrow-tutorial) for a quick start using Ozone's Docker image.
 
 ## Method 2: Access Ozone via Boto3 and S3 Gateway
 
@@ -119,7 +119,7 @@ print("Downloaded 'file.txt' as 'downloaded.txt'")
 Replace endpoint URL, credentials, and bucket names with your setup.
 :::
 
-Try it yourself! Check out [Boto3 Tutorial](../../../../2.0.0/recipe/boto3tutorial.html) for a quick start using Ozone's Docker image.
+Try it yourself! Check out [Boto3 Tutorial](./boto3-tutorial) for a quick start using Ozone's Docker image.
 
 ## Method 3: Access Ozone via HttpFS REST API
 
@@ -192,7 +192,7 @@ else:
   print(resp_read.text)
 ```
 
-Try it yourself! Check out [Access Ozone using HttpFS REST API Tutorial](../../../../2.0.0/recipe/pythonrequestsozonehttpfs.html) for a quick start using Ozone's Docker image.
+Try it yourself! Check out [Access Ozone using HttpFS REST API Tutorial](./python-requests-ozone-httpfs) for a quick start using Ozone's Docker image.
 
 ### Code Example (webhdfs)
 

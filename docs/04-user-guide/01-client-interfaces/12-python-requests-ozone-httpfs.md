@@ -1,28 +1,8 @@
 ---
 title: Access Ozone using HTTPFS REST API (Docker + Python Requests)
-linkTitle: HTTPFS Access (Docker)
-summary: Step-by-step tutorial for accessing Apache Ozone using the HTTPFS REST API via Python's requests library in a Docker-based environment.
-weight: 13
 ---
 
-<!--
-Licensed to the Apache Software Foundation (ASF) under one or more
-contributor license agreements.  See the NOTICE file distributed with
-this work for additional information regarding copyright ownership.
-The ASF licenses this file to You under the Apache License, Version 2.0
-(the "License"); you may not use this file except in compliance with
-the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-
-This tutorial demonstrates how to access Apache Ozone using the HTTPFS REST API and Python’s `requests` library. It covers writing and reading a file via simple authentication.
+This tutorial demonstrates how to access Apache Ozone using the HttpFS REST API and Python’s `requests` library. It covers writing and reading a file via simple authentication.
 
 ## Prerequisites
 
@@ -33,7 +13,8 @@ This tutorial demonstrates how to access Apache Ozone using the HTTPFS REST API 
 
 ### 1️⃣ Start Ozone in Docker
 
-Download the latest Docker Compose file for Ozone and start the cluster with 3 DataNodes:
+Download the latest Docker Compose file for Ozone and start the cluster with 3 Datanodes:
+
 ```bash
 curl -O https://raw.githubusercontent.com/apache/ozone-docker/latest/docker-compose.yaml
 docker compose up -d --scale datanode=3
@@ -46,6 +27,7 @@ Connect to the SCM container:
 ```bash
 docker exec -it <your-scm-container-name-or-id> bash
 ```
+
 > Change the container id `<your-scm-container-name-or-id>` to your actual container id.
 
 The rest of the tutorial will run on this container.
@@ -65,7 +47,7 @@ Install the `requests` library:
 pip install requests
 ```
 
-### 4️⃣ Access Ozone HTTPFS via Python
+### 4️⃣ Access Ozone HttpFS via Python
 
 Create a script (`ozone_httpfs_example.py`) with the following content:
 
@@ -143,6 +125,6 @@ python ozone_httpfs_example.py
 
 ## References
 
-- [Apache Ozone HTTPFS Docs](https://ozone.apache.org/docs/edge/interface/httpfs.html)
+- [Apache Ozone HttpFS Docs](./httpfs)
 - [Python requests Documentation](https://requests.readthedocs.io/)
-- [Ozone Client Interfaces](https://ozone.apache.org/docs/edge/interface.html)
+- [Ozone Client Interfaces](../client-interfaces/)
