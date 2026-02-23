@@ -79,6 +79,7 @@ Add the following to `/etc/hadoop/core-site.xml`:
     </property>
 </configuration>
 ```
+
 > Note: the Docker container has environment variable `OZONE_CONF_DIR=/etc/hadoop/` so it knows where to locate the configuration files.
 
 ### 6️⃣ Access Ozone Using PyArrow
