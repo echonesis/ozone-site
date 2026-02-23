@@ -242,10 +242,10 @@ const config = {
             'https://github.com/apache/ozone-site/tree/master',
           // TODO: The following sections are currently hidden. Ensure that a section contains a few pages
           //  of publishable quality before enabling visibility for that section.
-          exclude: [
-            '**/06-troubleshooting/**',
-            '**/07-system-internals/**',
-          ]
+          //exclude: [
+          //  '**/06-troubleshooting/**',
+          //  '**/07-system-internals/**',
+          //]
         },
         blog: {
           showReadingTime: true,
