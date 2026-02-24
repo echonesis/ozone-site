@@ -10,6 +10,6 @@ This page lists organizations that are using Apache Ozone in production or for s
 | Preferred Networks | ML Cluster: [A Year with Apache Ozone](https://tech.preferred.jp/en/blog/a-year-with-apache-ozone/), [Two Years with Apache Ozone](https://tech.preferred.jp/en/blog/two-years-with-apache-ozone/) |
 | G-Research | [G-Research Open-Source](https://opensource.gresearch.co.uk/) |
 | Qihoo360 | [WeChat Article](https://mp.weixin.qq.com/s/OB_YTlXfDMg6ZfMaYOkn_Q) |
-| DiDi | [Apache Ozone Best Practices at DiDi (PDF)](pathname:///ApacheOzoneBestPracticesAtDidi.pdf) |
+| DiDi | [Apache Ozone Best Practices at DiDi (PDF)](/ApacheOzoneBestPracticesAtDidi.pdf) |
 | Meituan | |
 | China Unicom | |

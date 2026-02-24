@@ -157,7 +157,7 @@ ozone sh bucket link /vol1/bucket1 /s3v/common-bucket
 This example expose the `/vol1/bucket1` Ozone bucket as an S3 compatible `common-bucket` via the S3 interface.
 
 :::note
-The implementation details of the bucket-linking feature can be found in the [design doc](../../../../2.0.0/design/volume-management.html).
+The implementation details of the bucket-linking feature can be found in the [design doc](pathname:///docs/2.0.0/design/volume-management.html).
 :::
 
 ## Clients

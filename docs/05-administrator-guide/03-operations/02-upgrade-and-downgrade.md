@@ -38,7 +38,7 @@ Starting with your current version of Ozone, complete the following steps to upg
     ozone admin om prepare -id=<om-sevice-id>
     ```
 
-    The `prepare` command will block the Ozone Managers from receiving all write requests. See [Ozone Manager Prepare For Upgrade](../../../2.0.0/design/omprepare.html) for more information
+    The `prepare` command will block the Ozone Managers from receiving all write requests. See [Ozone Manager Prepare For Upgrade](pathname:///docs/2.0.0/design/omprepare.html) for more information
 
 2. Stop all components.
 
