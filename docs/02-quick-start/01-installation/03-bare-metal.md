@@ -159,7 +159,7 @@ Edit `/opt/ozone/etc/hadoop/ozone-site.xml`:
 - [Network Ports Reference](../../administrator-guide/configuration/basic/network/default-ports)
 - [S3 Gateway Setup Guide](../../user-guide/client-interfaces/s3/s3-api)
 - [Security Configuration](../../administrator-guide/configuration/)
-- [High Availability Setup](../../system-internals/components/ozone-manager/high-availability)
+- [High Availability Setup](pathname:///docs/2.0.0/feature/om-ha.html)
 
 Copy `ozone-site.xml` to all nodes.
 
