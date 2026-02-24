@@ -263,10 +263,10 @@ const config = {
             'https://github.com/apache/ozone-site/tree/master',
           // TODO: The following sections are currently hidden. Ensure that a section contains a few pages
           //  of publishable quality before enabling visibility for that section.
-          //exclude: [
-          //  '**/06-troubleshooting/**',
-          //  '**/07-system-internals/**',
-          //]
+          exclude: [
+            '**/06-troubleshooting/**',
+            '**/07-system-internals/**',
+          ],
           sidebarItemsGenerator: async ({defaultSidebarItemsGenerator, ...args}) => {
             const items = await defaultSidebarItemsGenerator(args);
             const hiddenIds = new Set([
